@@ -31,21 +31,35 @@
         margin-left: 0;
       }
 
-      /* grid layout */
       main {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
         gap: 2rem;
         max-width: 1200px;
         width: 100%;
       }
 
-      /* flexbox for images */
+      /* Ensure images and articles align properly */
       .image-container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
+      }
+
+      /* Stack articles in a single column */
+      .articles-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; /* Space between articles */
+      }
+
+      /* Ensure articles fit well */
+      article {
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
 
       .image-container figure {
@@ -161,41 +175,38 @@
     </header>
 
     <main>
-      <section>
-        <p>
-          I am a well-trained fitness lover. Me and other like-minded people, including my trainer and her trainees, aim to work on managing our bodies in a precise way.
-        </p>
-      </section>
-
       <div class="image-container">
         <figure>
           <img src="pics/strongback.jpg" alt="Pulldown" title="Wide-Grip Lat Pulldown" />
           <figcaption>Me performing a wide-grip lat pulldown</figcaption>
         </figure>
-
+    
         <figure>
           <img src="pics/stepmill_view.jpg" alt="Stair-climbing" title="Stair climbing view" />
           <figcaption>View from the stair-climbing machine in our building</figcaption>
         </figure>
       </div>
-
-      <article>
-        <h2>Wide-Grip Lat Pulldown</h2>
-        <blockquote>
-          <p>
-            <strong>Wide-Grip Lat Pulldown</strong> is a great exercise for building a strong back. It targets the latissimus dorsi muscle, the largest muscle in the back. To perform the exercise, sit down at a lat pulldown machine and grab the bar with an overhand grip wider than shoulder-width. Pull the bar down to your chest, keeping your back straight and chest up. Slowly return the bar to the starting position and repeat. <strong>Remember:</strong> Do not use your shoulder or biceps to pull the weight down. Focus on using your back muscles.
-          </p>
-        </blockquote>
-      </article>
-
-      </article>
-        <h2>Stair climbing</h2>
-        <blockquote>
-          <p>
-            Climbing stair is the most effective cardio workout that can help you burn calories and lose weight. It also helps to tone your legs, strengthen your core, and improve your cardiovascular health. It is a low-impact exercise that is easy on the joints and can be done by people of all fitness levels. To get the most out of your stair-climbing workout, try to maintain a steady pace and keep your heart rate up. You can also vary the intensity of your workout by increasing the speed or resistance of the machine.
-          </p>
-        </blockquote>
-      </article>
+    
+      <!-- Wrap both articles in a container -->
+      <div class="articles-container">
+        <article>
+          <h2>Wide-Grip Lat Pulldown</h2>
+          <blockquote>
+            <p>
+              <strong>Wide-Grip Lat Pulldown</strong> is a great exercise for building a strong back. It targets the latissimus dorsi muscle, the largest muscle in the back. To perform the exercise, sit down at a lat pulldown machine and grab the bar with an overhand grip wider than shoulder-width. Pull the bar down to your chest, keeping your back straight and chest up. Slowly return the bar to the starting position and repeat. <strong>Remember:</strong> Do not use your shoulder or biceps to pull the weight down. Focus on using your back muscles.
+            </p>
+          </blockquote>
+        </article>
+    
+        <article>
+          <h2>Stair Climbing</h2>
+          <blockquote>
+            <p>
+              Climbing stairs is the most effective cardio workout that can help you burn calories and lose weight. It also helps to tone your legs, strengthen your core, and improve your cardiovascular health. It is a low-impact exercise that is easy on the joints and can be done by people of all fitness levels. To get the most out of your stair-climbing workout, try to maintain a steady pace and keep your heart rate up. You can also vary the intensity of your workout by increasing the speed or resistance of the machine.
+            </p>
+          </blockquote>
+        </article>
+      </div>
     </main>
 
     <section id="testimonials">
@@ -203,11 +214,12 @@
         <p class="username">Trainer Sunny:</p>
         <p>"This workout routine has changed my life! Highly recommended."</p>
       </div>
+    </section>
 
-      <section id="parks">
-        <h2>Outdoor activity is also important - explore public parks in NYC!</h2>
-        <div id="park-list">Loading park data...</div>
-      </section>
+    <section id="parks">
+      <h2>Outdoor activity is also important - explore public parks in NYC!</h2>
+      <div id="park-list">Loading park data...</div>
+    </section>
 
     <footer>
       <p>&copy; 2025 Precision Fitness. All rights reserved.</p>
