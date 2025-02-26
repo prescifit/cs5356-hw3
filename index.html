@@ -31,30 +31,32 @@
         margin-left: 0;
       }
 
+      /* Two-column layout: Images on the left, Articles on the right */
       main {
         display: grid;
         grid-template-columns: 1fr 1fr; /* Two equal columns */
         gap: 2rem;
         max-width: 1200px;
         width: 100%;
+        align-items: start; /* Aligns the articles and images at the top */
       }
 
-      /* Ensure images and articles align properly */
+      /* Ensure images are well-aligned */
       .image-container {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
         gap: 1rem;
+        align-items: center; /* Centers images in column */
       }
 
-      /* Stack articles in a single column */
+      /* Stack articles inside the right column */
       .articles-container {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem; /* Space between articles */
+        gap: 1.5rem;
       }
 
-      /* Ensure articles fit well */
+      /* Ensure articles align properly */
       article {
         background: white;
         padding: 1rem;
@@ -169,12 +171,18 @@
     </style>
   </head>
 
-  <body>
-    <header>
-      <h1>Welcome to Precision Fitness!</h1>
-    </header>
+  <header>
+    <h1>Welcome to Precision Fitness!</h1>
+  </header>
 
+  <body>
     <main>
+      <section>
+        <p>
+          I am a well-trained fitness lover. Me and other like-minded people, including my trainer and her trainees, aim to work on managing our bodies in a precise way.
+        </p>
+      </section>
+
       <div class="image-container">
         <figure>
           <img src="pics/strongback.jpg" alt="Pulldown" title="Wide-Grip Lat Pulldown" />
@@ -187,7 +195,7 @@
         </figure>
       </div>
     
-      <!-- Wrap both articles in a container -->
+      <!-- Right Column: Articles -->
       <div class="articles-container">
         <article>
           <h2>Wide-Grip Lat Pulldown</h2>
