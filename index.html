@@ -3,9 +3,184 @@
   <head>
     <meta charset="utf-8" />
     <title>Precision Fitness</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: system-ui, sans-serif;
+        line-height: 1.6;
+        background-color: #f8f8f8;
+        color: #333;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      /* grid layout */
+      main {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        width: 100%;
+      }
+
+      /* flexbox for images */
+      .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .image-container figure {
+        max-width: 400px;
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      figcaption {
+        font-size: 0.9rem;
+        font-style: italic;
+        margin-top: 0.5rem;
+      }
+
+      article {
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      blockquote {
+        font-style: italic;
+        border-left: 4px solid rgb(204, 215, 243);
+        padding-left: 1rem;
+        margin-top: 1rem;
+      }
+
+      /* flexbox for testimonials */
+      #testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+        max-width: 1200px;
+        margin-top: 2rem;
+      }
+
+      .testimonial {
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-width: 300px;
+        text-align: center;
+      }
+
+      .testimonial img {
+        border: 2px solid pink;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+      }
+
+      .username {
+        font-weight: 600;
+        margin-top: 0.5rem;
+      }
+
+      /* 🟢 FOOTER */
+      footer {
+        text-align: center;
+        margin-top: 2rem;
+        padding: 1rem;
+        background: #222;
+        color: white;
+        width: 100%;
+      }
+
+      /* Mobile Optimization */
+      @media (max-width: 768px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+
+        .image-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #testimonials {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <h1>Welcome to precision fitness!</h1>
-    <p>I am a well-trained fitness lover. Me and other like minded people, including my trainer and her trainees, aim to work on managing our body in a precise way.</p>
+    <header>
+      <h1>Welcome to Precision Fitness!</h1>
+    </header>
+
+    <main>
+      <section>
+        <p>
+          I am a well-trained fitness lover. Me and other like-minded people, including my trainer and her trainees, aim to work on managing our bodies in a precise way.
+        </p>
+      </section>
+
+      <div class="image-container">
+        <figure>
+          <img src="pics/strongback.jpg" alt="Pulldown" title="Wide-Grip Lat Pulldown" />
+          <figcaption>Performing a Wide-Grip Lat Pulldown</figcaption>
+        </figure>
+
+        <figure>
+          <img src="pics/stepmill_view.jpg" alt="Stair-climbing" title="Stair climbing view" />
+          <figcaption>View from a stair-climbing machine</figcaption>
+        </figure>
+      </div>
+
+      <article>
+        <h2>Wide-Grip Lat Pulldown</h2>
+        <blockquote>
+          <p>
+            <strong>Wide-Grip Lat Pulldown</strong> is a great exercise for building a strong back. It targets the latissimus dorsi muscle, the largest muscle in the back. To perform the exercise, sit down at a lat pulldown machine and grab the bar with an overhand grip wider than shoulder-width. Pull the bar down to your chest, keeping your back straight and chest up. Slowly return the bar to the starting position and repeat. <strong>Remember:</strong> Do not use your shoulder or biceps to pull the weight down. Focus on using your back muscles.
+          </p>
+        </blockquote>
+      </article>
+    </main>
+
+    <section id="testimonials">
+      <div class="testimonial">
+        <p class="username">OMG</p>
+        <p>"This workout routine has changed my life! Highly recommended."</p>
+      </div>
+
+    <footer>
+      <p>&copy; 2025 Precision Fitness. All rights reserved.</p>
+    </footer>
   </body>
 </html>
